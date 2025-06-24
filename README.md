@@ -27,8 +27,6 @@ bun src/index.js https://github.com/vercel/ai
 3. **Tools** defined with **Zod** schemas let the model ask for extra data (`repoInfo`, `fileTree`).
 4. The LLM synthesises everything into a human-readable summary + suggestions.
 
-![flow diagram](https://raw.githubusercontent.com/daviddoswell/repo-reviewer/main/docs/flow.png)
-
 ---
 
 ## Quick start
