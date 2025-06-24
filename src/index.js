@@ -23,7 +23,9 @@ async function analyzeRepository(repoOwner, repoName) {
 
   const { text } = await generateText({
     model: openai('o3-mini'),
-    prompt: `You are a GitHub repository analyzer. Analyze the repo ${repoOwner}/${repoName}. Use the available tools as needed, then provide a concise summary and two improvement suggestions.`,
+    prompt: `You are a GitHub repository analyzer. Analyze the repo ${repoOwner}/${repoName}. Use the available tools as needed, then provide:
+    • a concise high-level summary
+    • three language-specific technical improvement suggestions focused on code smell, code quality, and domain modelling best practices. Reference concrete files or patterns you detect.`,
     tools,
     toolChoice: 'auto',
     maxSteps: 6,
